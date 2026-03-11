@@ -60,12 +60,13 @@ export function CTASection() {
               href="#"
               className="group flex h-[62px] items-center gap-3 rounded-xl bg-black px-6 transition-all hover:scale-105 hover:bg-black/90"
             >
-              <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none">
-                <path d="M3 20.5V3.5L21 12L3 20.5Z" fill="#0F9D58"/>
-                <path d="M3 3.5L21 12L13.5 8.5L3 3.5Z" fill="#4285F4"/>
-                <path d="M3 20.5L21 12L13.5 15.5L3 20.5Z" fill="#34A853"/>
-                <path d="M3 3.5V20.5L13.5 12L3 3.5Z" fill="#F4B400"/>
-              </svg>
+              <Image 
+                src="/google-play-icon.svg"
+                alt="Google Play"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <div className="text-left text-white">
                 <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Get it on</div>
                 <div className="text-lg font-semibold leading-tight">Google Play</div>
@@ -77,10 +78,13 @@ export function CTASection() {
               href="#"
               className="group flex h-[62px] items-center gap-3 rounded-xl bg-black px-6 transition-all hover:scale-105 hover:bg-black/90"
             >
-              <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" fill="#FF0000"/>
-                <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <Image 
+                src="/appgallery-icon.svg"
+                alt="AppGallery"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <div className="text-left text-white">
                 <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Explore it on</div>
                 <div className="text-lg font-semibold leading-tight">AppGallery</div>
