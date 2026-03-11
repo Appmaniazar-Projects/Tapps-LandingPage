@@ -104,8 +104,11 @@ export function Hero() {
                 href="#"
                 className="group flex h-[58px] items-center gap-3 rounded-xl bg-black px-5 transition-all hover:scale-105 hover:bg-black/90"
               >
-                <svg className="h-8 w-8" viewBox="0 0 512 512" fill="none">
-                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="#ffffff"/>
+                <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 20.5V3.5L21 12L3 20.5Z" fill="#0F9D58"/>
+                  <path d="M3 3.5L21 12L13.5 8.5L3 3.5Z" fill="#4285F4"/>
+                  <path d="M3 20.5L21 12L13.5 15.5L3 20.5Z" fill="#34A853"/>
+                  <path d="M3 3.5V20.5L13.5 12L3 3.5Z" fill="#F4B400"/>
                 </svg>
                 <div className="text-left text-white">
                   <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Get it on</div>
@@ -119,10 +122,8 @@ export function Hero() {
                 className="group flex h-[58px] items-center gap-3 rounded-xl bg-black px-5 transition-all hover:scale-105 hover:bg-black/90"
               >
                 <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#FF0000"/>
-                  <path d="M2 17l10 5 10-5" stroke="#FF0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 12l10 5 10-5" stroke="#FF0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <circle cx="12" cy="12" r="3" fill="#ffffff"/>
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" fill="#FF0000"/>
+                  <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <div className="text-left text-white">
                   <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Explore it on</div>
