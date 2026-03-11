@@ -105,7 +105,7 @@ export function Hero() {
                 className="group flex h-[58px] items-center gap-3 rounded-xl bg-black px-5 transition-all hover:scale-105 hover:bg-black/90"
               >
                 <Image 
-                  src="/google-play-icon.svg"
+                  src="/google-play-logo.png"
                   alt="Google Play"
                   width={32}
                   height={32}
@@ -123,7 +123,7 @@ export function Hero() {
                 className="group flex h-[58px] items-center gap-3 rounded-xl bg-black px-5 transition-all hover:scale-105 hover:bg-black/90"
               >
                 <Image 
-                  src="/appgallery-icon.svg"
+                  src="/Huawei-AppGallery-logo.png"
                   alt="AppGallery"
                   width={32}
                   height={32}

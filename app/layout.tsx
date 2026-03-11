@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description: 'Stay ahead of water disruptions with TAPPS. Get real-time water levels, weather patterns, and metro insights to plan ahead and never be caught off guard.',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
     apple: '/apple-icon.png',
-    shortcut: '/favicon.svg',
+    shortcut: '/favicon.png',
   },
 }
 
