@@ -11,9 +11,9 @@ export function Footer() {
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tapps%20Final%20Logo-01-b3jF1KmO0SvEQO4T6h52eqyfUhrM0e.png"
               alt="TAPPS - The Water App"
-              width={120}
-              height={48}
-              className="h-12 w-auto"
+              width={300}
+              height={120}
+              className="h-24 w-auto"
             />
             <p className="mt-4 max-w-sm text-muted-foreground">
               TAPPS is your proactive water management companion, helping South Africans stay informed and prepared for

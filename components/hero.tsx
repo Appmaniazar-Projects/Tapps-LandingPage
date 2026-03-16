@@ -60,10 +60,10 @@ export function Hero() {
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tapps%20Final%20Logo-01-b3jF1KmO0SvEQO4T6h52eqyfUhrM0e.png"
             alt="TAPPS - The Water App"
-            width={140}
-            height={56}
+            width={300}
+            height={120}
             className="brightness-0 invert"
-            style={{ height: 56, width: "auto" }}
+            style={{ height: 150, width: "auto" }}
           />
           <nav className="hidden items-center gap-8 md:flex">
             <a href="#features" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
