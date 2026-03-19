@@ -2,58 +2,11 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-
-// Water droplet SVG component
-function WaterDroplet({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <path
-        d="M12 0C12 0 0 14 0 21C0 27.075 5.373 32 12 32C18.627 32 24 27.075 24 21C24 14 12 0 12 0Z"
-        fill="currentColor"
-      />
-      <ellipse cx="8" cy="18" rx="4" ry="5" fill="white" fillOpacity="0.3" />
-    </svg>
-  )
-}
+import { FluidBackground } from "@/components/ui/fluid-background"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0d4f7a] via-[#1870b9] to-[#3bb4e7]">
-      {/* Soft background shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-[#3bb4e7]/20 blur-3xl" />
-        <div className="absolute top-1/2 -left-20 h-80 w-80 rounded-full bg-[#8FC9FE]/15 blur-3xl" />
-        <div className="absolute bottom-40 right-1/3 h-64 w-64 rounded-full bg-[#3bb4e7]/25 blur-3xl" />
-      </div>
-
-      {/* Decorative water droplets */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Large droplets */}
-        <WaterDroplet className="absolute top-20 left-[10%] h-16 w-12 text-white/5 rotate-12" />
-        <WaterDroplet className="absolute top-32 right-[15%] h-20 w-14 text-[#8FC9FE]/10 -rotate-6" />
-        <WaterDroplet className="absolute bottom-40 left-[20%] h-24 w-16 text-white/5 rotate-[-15deg]" />
-        <WaterDroplet className="absolute top-1/2 right-[8%] h-14 w-10 text-[#3bb4e7]/15 rotate-20" />
-        
-        {/* Medium droplets */}
-        <WaterDroplet className="absolute top-[15%] left-[30%] h-10 w-7 text-white/8 rotate-[-8deg]" />
-        <WaterDroplet className="absolute top-[60%] left-[5%] h-12 w-8 text-[#8FC9FE]/10 rotate-15" />
-        <WaterDroplet className="absolute bottom-[25%] right-[25%] h-10 w-7 text-white/6 rotate-[-12deg]" />
-        <WaterDroplet className="absolute top-[40%] left-[45%] h-8 w-6 text-[#3bb4e7]/12 rotate-6" />
-        
-        {/* Small droplets */}
-        <WaterDroplet className="absolute top-[25%] right-[35%] h-6 w-4 text-white/10 rotate-[-5deg]" />
-        <WaterDroplet className="absolute bottom-[35%] left-[35%] h-5 w-4 text-[#8FC9FE]/15 rotate-10" />
-        <WaterDroplet className="absolute top-[70%] right-[40%] h-6 w-4 text-white/8 rotate-[-18deg]" />
-        <WaterDroplet className="absolute top-[10%] left-[55%] h-5 w-4 text-[#3bb4e7]/10 rotate-8" />
-        <WaterDroplet className="absolute bottom-[50%] right-[12%] h-4 w-3 text-white/12 rotate-[-3deg]" />
-        <WaterDroplet className="absolute top-[85%] left-[60%] h-5 w-4 text-[#8FC9FE]/8 rotate-22" />
-      </div>
-
+    <FluidBackground variant="hero" className="relative min-h-screen">
       <div className="container relative mx-auto px-4 py-8">
         {/* Header */}
         <header className="flex items-center justify-between py-4">
@@ -62,8 +15,7 @@ export function Hero() {
             alt="TAPPS - The Water App"
             width={300}
             height={120}
-            className="brightness-0 invert"
-            style={{ height: 150, width: "auto" }}
+            className="h-16 w-auto brightness-0 invert md:h-20"
           />
           <nav className="hidden items-center gap-8 md:flex">
             <a href="#features" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
@@ -78,23 +30,25 @@ export function Hero() {
           </nav>
           <Button
             variant="secondary"
-            className="hidden rounded-full bg-white px-6 text-[#1870b9] hover:bg-white/90 md:inline-flex"
+            className="hidden rounded-full bg-white px-6 text-[#1870b9] shadow-sm hover:bg-white/90 md:inline-flex"
           >
             Get the App
           </Button>
         </header>
 
         {/* Hero Content */}
-        <div className="mt-16 grid items-center gap-12 lg:mt-20 lg:grid-cols-2 lg:gap-8">
+        <div className="mt-16 grid items-center gap-12 lg:mt-20 lg:grid-cols-2 lg:gap-10">
           <div className="text-center lg:text-left">
-            <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
-              Proactive Water Management
+            <span className="inline-flex items-center rounded-full bg-white/15 px-4 py-2 text-sm font-medium text-white/95 backdrop-blur-sm">
+              Real-time water insights
             </span>
-            <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
-              Know Your Dam Levels, Save Water
+            <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-5xl lg:text-6xl">
+              Know your dam levels.
+              <span className="block text-white/90">Plan ahead. Save water.</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-lg text-pretty text-lg text-white/90 lg:mx-0">
-              TAPPS empowers South Africans with real-time dam levels, weather forecasts, and metro insights to adopt proactive water-saving behaviour based on current and anticipated water availability.
+            <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-white/90 lg:mx-0">
+              TAPPS gives you live dam levels, weather forecasts, and metro insights so you can make proactive water-saving
+              decisions based on what’s happening now and what’s coming next.
             </p>
 
             {/* App Store Buttons */}
@@ -102,36 +56,36 @@ export function Hero() {
               {/* Google Play Badge */}
               <a
                 href="#"
-                className="group flex h-[58px] items-center gap-3 rounded-xl bg-black px-5 transition-all hover:scale-105 hover:bg-black/90"
+                className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white px-6 text-[#1870b9] shadow-sm transition-transform hover:scale-[1.02] hover:bg-white/95"
               >
                 <Image 
                   src="/google-play-logo.png"
                   alt="Google Play"
                   width={32}
                   height={32}
-                  className="h-8 w-8"
+                  className="h-7 w-7"
                 />
-                <div className="text-left text-white">
-                  <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Get it on</div>
-                  <div className="text-lg font-semibold leading-tight">Google Play</div>
+                <div className="text-left">
+                  <div className="text-[10px] font-medium uppercase tracking-wider opacity-70">Get it on</div>
+                  <div className="text-base font-semibold leading-tight">Google Play</div>
                 </div>
               </a>
               
               {/* Huawei AppGallery Badge */}
               <a
                 href="#"
-                className="group flex h-[58px] items-center gap-3 rounded-xl bg-black px-5 transition-all hover:scale-105 hover:bg-black/90"
+                className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white/10 px-6 text-white shadow-sm ring-1 ring-white/20 backdrop-blur-sm transition-transform hover:scale-[1.02] hover:bg-white/15"
               >
                 <Image 
                   src="/Huawei-AppGallery-logo.png"
                   alt="AppGallery"
                   width={32}
                   height={32}
-                  className="h-8 w-8"
+                  className="h-7 w-7"
                 />
-                <div className="text-left text-white">
+                <div className="text-left">
                   <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Explore it on</div>
-                  <div className="text-lg font-semibold leading-tight">AppGallery</div>
+                  <div className="text-base font-semibold leading-tight">AppGallery</div>
                 </div>
               </a>
             </div>
@@ -204,16 +158,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-            className="fill-background"
-          />
-        </svg>
-      </div>
-    </section>
+    </FluidBackground>
   )
 }

@@ -1,41 +1,9 @@
 import Image from "next/image"
-
-// Water droplet SVG component
-function WaterDroplet({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <path
-        d="M12 0C12 0 0 14 0 21C0 27.075 5.373 32 12 32C18.627 32 24 27.075 24 21C24 14 12 0 12 0Z"
-        fill="currentColor"
-      />
-      <ellipse cx="8" cy="18" rx="4" ry="5" fill="white" fillOpacity="0.3" />
-    </svg>
-  )
-}
+import { FluidBackground } from "@/components/ui/fluid-background"
 
 export function CTASection() {
   return (
-    <section id="download" className="relative overflow-hidden bg-gradient-to-br from-[#0d4f7a] via-[#1870b9] to-[#3bb4e7] py-20 md:py-28">
-      {/* Background shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 right-1/4 h-72 w-72 rounded-full bg-[#3bb4e7]/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-[#8FC9FE]/15 blur-3xl" />
-      </div>
-      
-      {/* Decorative water droplets */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <WaterDroplet className="absolute top-12 left-[12%] h-14 w-10 text-white/5 rotate-12" />
-        <WaterDroplet className="absolute bottom-20 right-[10%] h-18 w-12 text-[#8FC9FE]/10 -rotate-8" />
-        <WaterDroplet className="absolute top-1/3 right-[15%] h-10 w-7 text-white/8 rotate-[-12deg]" />
-        <WaterDroplet className="absolute bottom-1/3 left-[8%] h-8 w-5 text-[#3bb4e7]/12 rotate-15" />
-        <WaterDroplet className="absolute top-[60%] right-[30%] h-6 w-4 text-white/6 rotate-6" />
-      </div>
-
+    <FluidBackground variant="cta" className="relative overflow-hidden py-20 md:py-28">
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <Image
@@ -43,7 +11,7 @@ export function CTASection() {
             alt="TAPPS"
             width={60}
             height={75}
-            className="mx-auto mb-8"
+            className="mx-auto mb-8 opacity-95"
           />
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
             Ready to Take Control of Your Water Future?
@@ -58,36 +26,36 @@ export function CTASection() {
             {/* Google Play Badge */}
             <a
               href="#"
-              className="group flex h-[62px] items-center gap-3 rounded-xl bg-black px-6 transition-all hover:scale-105 hover:bg-black/90"
+              className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white px-6 text-[#1870b9] shadow-sm transition-transform hover:scale-[1.02] hover:bg-white/95"
             >
               <Image 
                 src="/google-play-logo.png"
                 alt="Google Play"
                 width={32}
                 height={32}
-                className="h-8 w-8"
+                className="h-7 w-7"
               />
-              <div className="text-left text-white">
-                <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Get it on</div>
-                <div className="text-lg font-semibold leading-tight">Google Play</div>
+              <div className="text-left">
+                <div className="text-[10px] font-medium uppercase tracking-wider opacity-70">Get it on</div>
+                <div className="text-base font-semibold leading-tight">Google Play</div>
               </div>
             </a>
             
             {/* Huawei AppGallery Badge */}
             <a
               href="#"
-              className="group flex h-[62px] items-center gap-3 rounded-xl bg-black px-6 transition-all hover:scale-105 hover:bg-black/90"
+              className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white/10 px-6 text-white shadow-sm ring-1 ring-white/20 backdrop-blur-sm transition-transform hover:scale-[1.02] hover:bg-white/15"
             >
               <Image 
                 src="/Huawei-AppGallery-logo.png"
                 alt="AppGallery"
                 width={32}
                 height={32}
-                className="h-8 w-8"
+                className="h-7 w-7"
               />
               <div className="text-left text-white">
                 <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">Explore it on</div>
-                <div className="text-lg font-semibold leading-tight">AppGallery</div>
+                <div className="text-base font-semibold leading-tight">AppGallery</div>
               </div>
             </a>
           </div>
@@ -100,6 +68,6 @@ export function CTASection() {
           </div>
         </div>
       </div>
-    </section>
+    </FluidBackground>
   )
 }

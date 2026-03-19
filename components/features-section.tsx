@@ -1,22 +1,5 @@
 import { Activity, Cloud, MapPin, Bell, FileWarning, Droplets } from "lucide-react"
-
-// Water droplet SVG component
-function WaterDroplet({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <path
-        d="M12 0C12 0 0 14 0 21C0 27.075 5.373 32 12 32C18.627 32 24 27.075 24 21C24 14 12 0 12 0Z"
-        fill="currentColor"
-      />
-      <ellipse cx="8" cy="18" rx="4" ry="5" fill="white" fillOpacity="0.3" />
-    </svg>
-  )
-}
+import { FluidBackground } from "@/components/ui/fluid-background"
 
 export function FeaturesSection() {
   const features = [
@@ -60,29 +43,16 @@ export function FeaturesSection() {
   ]
 
   return (
-    <section id="features" className="relative overflow-hidden bg-background py-20 md:py-28">
-      {/* Background decoration */}
-      <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#8FC9FE]/20 blur-3xl" />
-      <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#3bb4e7]/10 blur-3xl" />
-      
-      {/* Decorative water droplets */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <WaterDroplet className="absolute top-20 right-[10%] h-12 w-8 text-[#3bb4e7]/8 rotate-12" />
-        <WaterDroplet className="absolute bottom-32 left-[8%] h-16 w-10 text-[#8FC9FE]/10 -rotate-6" />
-        <WaterDroplet className="absolute top-1/2 right-[5%] h-10 w-7 text-[#1870b9]/6 rotate-[-15deg]" />
-        <WaterDroplet className="absolute top-[30%] left-[15%] h-8 w-5 text-[#3bb4e7]/8 rotate-8" />
-        <WaterDroplet className="absolute bottom-[20%] right-[20%] h-6 w-4 text-[#8FC9FE]/12 rotate-[-10deg]" />
-      </div>
-
+    <FluidBackground variant="features" className="relative overflow-hidden py-20 md:py-28">
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="mb-4 inline-block rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-secondary">
+          <span className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/15 backdrop-blur-sm">
             Features
           </span>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
             Everything You Need to Stay Informed
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-white/85">
             TAPPS brings together essential water data in one intuitive app, helping you make smarter decisions about
             your water usage.
           </p>
@@ -92,20 +62,20 @@ export function FeaturesSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-transparent hover:shadow-xl hover:shadow-primary/10"
+              className="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-8 shadow-sm backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/15"
             >
               <div
-                className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${feature.color} text-white shadow-lg transition-transform group-hover:scale-110`}
+                className={`mb-6 flex h-12 w-12 items-center justify-center rounded-2xl ${feature.color} text-white shadow-sm transition-transform group-hover:scale-105`}
               >
-                <feature.icon className="h-7 w-7" />
+                <feature.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground">{feature.title}</h3>
-              <p className="mt-3 text-muted-foreground">{feature.description}</p>
-              <div className="absolute -bottom-12 -right-12 h-32 w-32 rounded-full bg-gradient-to-br from-[#8FC9FE]/20 to-transparent opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+              <p className="mt-3 text-white/80">{feature.description}</p>
+              <div className="pointer-events-none absolute -bottom-16 -right-16 h-44 w-44 rounded-full bg-gradient-to-br from-[#8FC9FE]/20 to-transparent opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </FluidBackground>
   )
 }
