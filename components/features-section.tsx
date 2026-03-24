@@ -43,39 +43,40 @@ export function FeaturesSection() {
   ]
 
   return (
-    <FluidBackground variant="features" className="relative overflow-hidden py-20 md:py-28">
-      <div className="container relative mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/15 backdrop-blur-sm">
-            Features
-          </span>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-            Everything You Need to Stay Informed
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-white/85">
-            TAPPS brings together essential water data in one intuitive app, helping you make smarter decisions about
-            your water usage.
-          </p>
-        </div>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-8 shadow-sm backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/15"
-            >
+    <section id="features">
+      <FluidBackground variant="features" className="relative overflow-hidden py-20 md:py-28">
+        <div className="container relative mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/15 backdrop-blur-sm">
+              Features
+            </span>
+            <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+              Everything You Need to Stay Informed
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-white/85">
+              TAPPS brings together essential water data in one intuitive app, helping you make smarter decisions about
+              your water usage.
+            </p>
+          </div>
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature, index) => (
               <div
-                className={`mb-6 flex h-12 w-12 items-center justify-center rounded-2xl ${feature.color} text-white shadow-sm transition-transform group-hover:scale-105`}
+                key={index}
+                className="group relative overflow-hidden rounded-[20px] bg-white p-8 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-transform hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
               >
-                <feature.icon className="h-6 w-6" />
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-2xl text-[#1870b9]">
+                    <feature.icon className="h-6 w-6" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-[#0f1724]">{feature.title}</h3>
+                <p className="mt-3 text-[#0f1724]/80">{feature.description}</p>
+                <div className="pointer-events-none absolute -bottom-16 -right-16 h-44 w-44 rounded-full bg-gradient-to-br from-[#8FC9FE]/10 to-transparent opacity-0 blur-2xl transition-opacity group-hover:opacity-80" />
               </div>
-              <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-              <p className="mt-3 text-white/80">{feature.description}</p>
-              <div className="pointer-events-none absolute -bottom-16 -right-16 h-44 w-44 rounded-full bg-gradient-to-br from-[#8FC9FE]/20 to-transparent opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </FluidBackground>
+      </FluidBackground>
+    </section>
   )
 }

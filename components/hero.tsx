@@ -55,7 +55,9 @@ export function Hero() {
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
               {/* Google Play Badge */}
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.tapps.appmaniazar&hl=en_ZA"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white px-6 text-[#1870b9] shadow-sm transition-transform hover:scale-[1.02] hover:bg-white/95"
               >
                 <Image 
@@ -73,7 +75,9 @@ export function Hero() {
               
               {/* Huawei AppGallery Badge */}
               <a
-                href="#"
+                href="https://appgallery.huawei.com/app/C116559651"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white/10 px-6 text-white shadow-sm ring-1 ring-white/20 backdrop-blur-sm transition-transform hover:scale-[1.02] hover:bg-white/15"
               >
                 <Image 

@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tapps-landing-page.vercel.app/sitemap.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /*.json$
+
+# Allow specific important paths
+Allow: /favicon.png
+Allow: /apple-icon.png
+Allow: /google-play-logo.png
+Allow: /Huawei-AppGallery-logo.png

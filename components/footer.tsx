@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Instagram } from "lucide-react"
 import { FluidBackground } from "@/components/ui/fluid-background"
 
 export function Footer() {
@@ -25,50 +25,33 @@ export function Footer() {
                 href="#"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#1973bb] shadow-sm ring-1 ring-white/20 transition-colors hover:bg-white"
               >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#1973bb] shadow-sm ring-1 ring-white/20 transition-colors hover:bg-white"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#1973bb] shadow-sm ring-1 ring-white/20 transition-colors hover:bg-white"
-              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#1973bb] shadow-sm ring-1 ring-white/20 transition-colors hover:bg-white"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
+              
             </div>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="mb-4 font-semibold text-white">Company</h4>
+            <h4 className="mb-4 font-semibold text-white">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white/75 transition-colors hover:text-white">
-                  About Us
+                <a href="#features" className="text-white/75 transition-colors hover:text-white">
+                  Features
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/75 transition-colors hover:text-white">
-                  Careers
+                <a href="#download" className="text-white/75 transition-colors hover:text-white">
+                  Download
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/75 transition-colors hover:text-white">
-                  Press
+                <a href="#how-it-works" className="text-white/75 transition-colors hover:text-white">
+                  How it Works
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/75 transition-colors hover:text-white">
+                <a href="#contact" className="text-white/75 transition-colors hover:text-white">
                   Contact
                 </a>
               </li>
@@ -79,17 +62,17 @@ export function Footer() {
             <h4 className="mb-4 font-semibold text-white">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white/75 transition-colors hover:text-white">
+                <a href="/privacy" className="text-white/75 transition-colors hover:text-white">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/75 transition-colors hover:text-white">
+                <a href="/terms" className="text-white/75 transition-colors hover:text-white">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/75 transition-colors hover:text-white">
+                <a href="/cookies" className="text-white/75 transition-colors hover:text-white">
                   Cookie Policy
                 </a>
               </li>
