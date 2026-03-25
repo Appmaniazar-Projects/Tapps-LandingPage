@@ -29,7 +29,7 @@ export function CTASection() {
               href="https://play.google.com/store/apps/details?id=com.tapps.appmaniazar&hl=en_ZA"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white px-6 text-[#1870b9] shadow-sm transition-transform hover:scale-[1.02] hover:bg-white/95"
+              className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white px-6 text-[#5a5a7a] shadow-sm transition-transform hover:scale-[1.02] hover:bg-white/95"
             >
               <Image 
                 src="/google-play-logo.png"
@@ -49,7 +49,7 @@ export function CTASection() {
               href="https://appgallery.huawei.com/app/C116559651"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white/10 px-6 text-white shadow-sm ring-1 ring-white/20 backdrop-blur-sm transition-transform hover:scale-[1.02] hover:bg-white/15"
+              className="group inline-flex h-[54px] items-center justify-center gap-3 rounded-full bg-white px-6 text-[#5a5a7a] shadow-sm transition-transform hover:scale-[1.02] hover:bg-white/95"
             >
               <Image 
                 src="/Huawei-AppGallery-logo.png"
